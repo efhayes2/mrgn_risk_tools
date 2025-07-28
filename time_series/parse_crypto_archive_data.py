@@ -3,9 +3,18 @@ import pandas as pd
 import datetime
 import matplotlib.pyplot as plt
 
+from price_studies.preprocess_raw import input_file
+
 # === Config ===
-input_file = r"C:\users\ehayes\Downloads\solusdc.csv"
-output_file = r"C:\data\crypto\crypto_archive\solana_ohlc_minute_bars_start_1_1_24_v2.csv"
+root = r'C:\data\crypto\crypto_archive\inputs'
+file_name = "bSOL_1m_ohlcv_backward.csv"
+input_file = os.path.join(root, file_name)
+
+file_name = "bSOL_1m_ohlcv_backward_processed.csv"
+output_file = os.path.join(root, file_name)
+
+
+# output_file = r"C:\data\crypto\crypto_archive\solana_ohlc_minute_bars_start_1_1_24_v2.csv"
 histogram_file = output_file.replace(".csv", "_returns_histogram.png")
 outliers_file = output_file.replace(".csv", "_returns_histogram_outliers.png")
 

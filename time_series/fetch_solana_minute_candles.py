@@ -11,14 +11,14 @@ import time
 start_time = time.time()
 
 # bSol, LST, mSOL, Wrapped Sol, BNSOL, bbSOL
-token = 'bSOL'
+token = 'LST'
 token_address = token_name_to_address_dict[token]
 
 # === CONFIG ===
 API_KEY = 'befde4ed-e89c-4302-a7c0-5714d3774c5f'
 URL = f'https://data.solanatracker.io/chart/{token_address}'
 HEADERS = {'x-api-key': API_KEY}
-TYPE = '1m'         # candle length
+TYPE = '15s'         # candle length
 LIMIT = 4000 if TYPE == '15s' else 1000
 
 
