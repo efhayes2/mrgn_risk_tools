@@ -3,14 +3,13 @@ import pandas as pd
 import datetime
 import matplotlib.pyplot as plt
 
-from price_studies.preprocess_raw import input_file
 
 # === Config ===
 root = r'C:\data\crypto\crypto_archive\inputs'
-file_name = "bSOL_1m_ohlcv_backward.csv"
+file_name = "mSOL_1m_ohlcv_backward.csv"
 input_file = os.path.join(root, file_name)
 
-file_name = "bSOL_1m_ohlcv_backward_processed.csv"
+file_name = "mSOL_1m_ohlcv_backward_processed.csv"
 output_file = os.path.join(root, file_name)
 
 
