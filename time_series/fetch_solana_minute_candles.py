@@ -11,7 +11,7 @@ import time
 start_time = time.time()
 
 # bSol, LST, mSOL, Wrapped Sol, BNSOL, bbSOL
-token = 'LST'
+token = 'hSOL'
 token_address = token_name_to_address_dict[token]
 
 # === CONFIG ===
@@ -22,7 +22,7 @@ TYPE = '15s'         # candle length
 LIMIT = 4000 if TYPE == '15s' else 1000
 
 
-CSV_FILE = 'c:/data/crypto/' + token + '_' + TYPE + '_ohlcv_backward.csv'
+CSV_FILE = 'c:/data/crypto/prices/' + token + '_' + TYPE + '_ohlcv_backward.csv'
 
 # Set end time to July 23, 2025 @ midnight UTC
 INITIAL_END = int(datetime.datetime(2025, 7, 23, 0, 0).timestamp())
